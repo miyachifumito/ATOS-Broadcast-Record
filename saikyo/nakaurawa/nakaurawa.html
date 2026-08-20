@@ -4,29 +4,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>埼京線-中浦和</title>
+        <style>
+            .station-sign {
+    margin: auto;
+    border-spacing: 0;
+}
+
+.station-name {
+    width: 700px;
+    height: 35px;
+    background-color: white;
+}
+
+.station-name-jp {
+    font-size: 35px;
+}
+
+.station-name-kana {
+    font-size: 15px;
+}
+
+.station-line {
+    height: 20px;
+    background-color: green;
+}
+
+.station-line-left {
+    width: 307.5px;
+    text-align: left;
+}
+
+.station-line-right {
+    width: 307.5px;
+    text-align: right;
+}
+
+.station-line-side {
+    width: 30px;
+    background-color: green;
+}
+
+.station-color {
+    width: 25px;
+}
+
+.station-name-en {
+    height: 15px;
+    background-color: white;
+    font-size: 15px;
+}
+        </style>
     </head>
     <body style="text-align: center; background-color:#7cce9f; font-family: 'sans-serif', 'Noto Sans';">
         <table align="center" style="border-spacing: 0;">
             <tr>
-                <th colspan="5" style="width: 700px; height: 35px; background-color: white;">
-                    <span style="font-size: 35px;">中 浦 和</span><br>
-                    <span style="font-size: 15px;">なかうらわ</span>
+                <th colspan="5" class="station-name">
+                    <span class="station-name-jp">中 浦 和</span><br>
+                    <span class="station-name-kana">なかうらわ</span>
                 </th>
             </tr>
             <tr>
-                <td style="background-color: green; height: 20px; width: 30px;"></td>
-                <td style="background-color: green; height: 20px; width: 307.5px; text-align: left;">
-                    <a href="../nakaurawa/nakaurawa.html" style="color: white;"><b>武蔵浦和</b></a>
+                <td class="station-line-side"></td>
+                <td class="station-line station-line-left">
+                    <a style="color: white;" href="../musashiurawa/musashiurawa.html"><b>武蔵浦和</b></a>
                 </td>
-                <td style="background-color: #00ac9a; height: 20px; width: 25px;"></td>
-                <td style="background-color: green; height: 20px; width: 307.5px; text-align: right;">
-                    <a href="../minamiyono/minamiyono.html" style="color: white;"><b>南与野</b></a>
+                <td class="station-color" style="background-color: #00ac9a;"></td>
+                <td class="station-line station-line-right">
+                    <a href="../minamiyono/minamiyono.html"
+                        style="color: white;"><b>南与野</b></a>
                 </td>
-                <td style="background-color: green; height: 20px; width: 30px;"></td>
+                <td class="station-line-side"></td>
             </tr>
             <tr>
-                <td colspan="5" style="background-color: white; height: 15px;">
-                    <span style="font-size: 15px;"><b>Naka-Urawa</b></span>
+                <td colspan="5" class="station-name-en">
+                    <b>Naka-Urawa</b>
                 </td>
             </tr>
         </table>
@@ -52,11 +103,12 @@
                     <span style="font-size: small;">新宿・大崎方面</span>
                 </td>
                 <td style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
-                    <a>1番線次発予告放送</a><br>
+                    <a href="before201910/local_shinjuku_y_s.mp3">1番線次発予告放送(各駅停車 新宿行)</a><br>
                     <a>1番線接近放送</a><br>
                 </td>
-                <td style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
-                    常磐改良型です。
+                <td rowspan="2" style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
+                    常磐改良型です。<br>
+                    宇都宮型への更新少し前から色々変わっていた関係で津田英治氏による「南与野」や「川越線直通」パーツが出現することがありました。
                 </td>
             </tr>
             <tr>
@@ -69,11 +121,8 @@
                     <span style="font-size: small;">大宮方面</span>
                 </td>
                 <td style="background-color: white; color: black; font-size: 15px; text-align: left;">
-                    <a>2番線次発予告放送</a><br>
-                    <a>2番線接近放送</a><br>
-                </td>
-                <td style="background-color: white; color: black; font-size: 15px; text-align: left;">
-                    常磐改良型です。
+                    <a href="before201910/local_kawagoe_y_ts.mp3">2番線次発予告放送(各駅停車 川越行)</a><br>
+                    <a href="before201910/local_kawagoe_s_ts.mp3">2番線接近放送</a><br>
                 </td>
             </tr>
         </table>
