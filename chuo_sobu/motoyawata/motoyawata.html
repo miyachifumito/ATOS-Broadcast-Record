@@ -90,8 +90,8 @@
         </b></p>
         <table align="center" border="2" style="border-collapse: collapse; border-color: black;">
             <tr>
-                <td colspan="5" style="background-color: black; color: white; font-size: 18px;">
-                    <b>2026年9月まで</b>
+                <td colspan="6" style="background-color: black; color: white; font-size: 18px;">
+                    <b>2026年9月まで（発車メロディは'25年6月まで）</b>
                 </td>
             </tr>
             <tr>
@@ -110,6 +110,25 @@
                 <td rowspan="2" style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
                     常磐改良型です。
                 </td>
+                <td style="background-color: white;"><div
+                        style="margin-top:20px; text-align:center;">
+                        <button class="departure-melody-switch"
+                            data-melody="dep1_1.mp3"
+                            data-voice="close1_1.mp3"
+                            data-delay="2"
+                            style="
+                font-size:12px;
+                font-weight:bold;
+                border:none;
+                background:#000;
+                color:white;
+                cursor:pointer;
+                width: 40px;
+                height: 40px;
+            ">
+                            OFF
+                        </button>
+                    </div></td>
             </tr>
             <tr>
                 <th style="background-color: #383838; color: white; ">
@@ -124,6 +143,25 @@
                     <a href="before202609/tsudanuma_y_s.mp3">2番線次発予告放送(津田沼行)</a><br>
                     <a href="before202609/tsudanuma_s_s.mp3">2番線接近放送</a><br>
                 </td>
+                <td style="background-color: white;"><div
+                        style="margin-top:20px; text-align:center;">
+                        <button class="departure-melody-switch"
+                            data-melody="dep2_1.mp3"
+                            data-voice="close2_1.mp3"
+                            data-delay="2"
+                            style="
+                font-size:12px;
+                font-weight:bold;
+                border:none;
+                background:#000;
+                color:white;
+                cursor:pointer;
+                width: 40px;
+                height: 40px;
+            ">
+                            OFF
+                        </button>
+                    </div></td>
             </tr>
         </table>
         <br>
@@ -244,5 +282,81 @@
         </table>
         <p style="font-size: smaller;">2026年9月18日時点</p>
         <p><b><a href="../chuo_sobu.html">総武線(各駅停車)のページに戻る</a></b></p>
+        <script>
+document.querySelectorAll(".departure-melody-switch").forEach(button => {
+
+    const melody = new Audio(button.dataset.melody);
+    const departureVoice = new Audio(button.dataset.voice);
+
+    // OFFにしてから戸閉放送を再生するまでの待ち時間（秒）
+    const delay = Number(button.dataset.delay) || 0;
+
+    melody.loop = true;
+
+    let isOn = false;
+    let delayTimer = null;
+
+    button.addEventListener("click", async () => {
+
+        isOn = !isOn;
+
+        if (isOn) {
+
+            // 待機中の戸閉放送をキャンセル
+            if (delayTimer !== null) {
+                clearTimeout(delayTimer);
+                delayTimer = null;
+            }
+
+            button.textContent =
+                button.textContent.replace("OFF", "ON");
+
+            button.style.background = "#ce0000";
+
+            departureVoice.pause();
+            departureVoice.currentTime = 0;
+
+            melody.currentTime = 0;
+
+            try {
+                await melody.play();
+            } catch (error) {
+                console.error(error);
+            }
+
+        } else {
+
+            button.textContent =
+                button.textContent.replace("ON", "OFF");
+
+            button.style.background = "#000";
+
+            // 発車メロディ停止
+            melody.pause();
+            melody.currentTime = 0;
+
+            // 指定秒数だけ無音にしてから戸閉放送
+            delayTimer = setTimeout(async () => {
+
+                delayTimer = null;
+
+                // 無音待機中に再びONになっていたら再生しない
+                if (isOn) {
+                    return;
+                }
+
+                departureVoice.currentTime = 0;
+
+                try {
+                    await departureVoice.play();
+                } catch (error) {
+                    console.error(error);
+                }
+
+            }, delay * 1000);
+        }
+    });
+});
+</script>
     </body>
 </html>
