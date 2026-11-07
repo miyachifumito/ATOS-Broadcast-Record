@@ -4,18 +4,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>篠ノ井線-松本</title>
+        <style>
+            .station-sign {
+    margin: auto;
+    border-spacing: 0;
+}
+
+.station-name {
+    width: 700px;
+    height: 35px;
+    background-color: white;
+}
+
+.station-name-jp {
+    font-size: 35px;
+}
+
+.station-name-kana {
+    font-size: 15px;
+}
+
+.station-line {
+    height: 20px;
+    background-color: green;
+}
+
+.station-line-left {
+    width: 307.5px;
+    text-align: left;
+}
+
+.station-line-right {
+    width: 307.5px;
+    text-align: right;
+}
+
+.station-line-side {
+    width: 30px;
+    background-color: green;
+}
+
+.station-color {
+    width: 25px;
+}
+
+.station-name-en {
+    height: 15px;
+    background-color: white;
+    font-size: 15px;
+}
+        </style>
     </head>
     <body style="text-align: center; background-color:#b4714a">
-        <img src="matsumoto.png" width="500px" alt="大崎駅駅名標">
-        <h1>松本（まつもと）<b>[SN 06]</b></h1>
-        <table border="1" align="center">
+        <table align="center" style="border-spacing: 0;">
             <tr>
-                <th style="width: 100px; text-align: left;">←<a href="">南松本</a></th>
-                <th style="width: 100px;"><span style="color: #d56a29;">■</span> 篠ノ井線</th>
-                <th style="width: 100px; text-align: right;"><a href="">田沢</a>→</th>
+                <th colspan="5" class="station-name">
+                    <span class="station-name-jp">松　本</span><br>
+                    <span class="station-name-kana">まつもと</span>
+                </th>
+            </tr>
+            <tr>
+                <td class="station-line-side"></td>
+                <td class="station-line station-line-left">
+                    <a style="color: white;"><b>南松本</b></a>
+                </td>
+                <td class="station-color" style="background-color: #d56a29;"></td>
+                <td class="station-line station-line-right">
+                    <a style="color: white;"><b>田 沢</b></a>
+                </td>
+                <td class="station-line-side"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="station-name-en">
+                    <b>Matsumoto</b>
+                </td>
             </tr>
         </table>
-        <br>
+        <h3>SN 06</h3>
         <p><b>
             1999年8月、初期型ATOS放送を導入、のち5日で上野型へ。<br>
             2025年11月の宇都宮改良型ATOS放送を導入とともに発車メロディも変更。IKSTへ。<br>

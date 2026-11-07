@@ -4,21 +4,159 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>内房線-安房鴨川</title>
+        <style>
+            .station-sign {
+    margin: auto;
+    border-spacing: 0;
+}
+
+.station-name {
+    width: 700px;
+    height: 35px;
+    background-color: white;
+}
+
+.station-name-jp {
+    font-size: 35px;
+}
+
+.station-name-kana {
+    font-size: 15px;
+}
+
+.station-line {
+    height: 20px;
+    background-color: green;
+}
+
+.station-line-left {
+    width: 307.5px;
+    text-align: left;
+}
+
+.station-line-right {
+    width: 307.5px;
+    text-align: right;
+}
+
+.station-line-side {
+    width: 30px;
+    background-color: green;
+}
+
+.station-color {
+    width: 25px;
+}
+
+.station-name-en {
+    height: 15px;
+    background-color: white;
+    font-size: 15px;
+}
+        </style>
     </head>
     <body style="text-align: center; background-color: lightseagreen;">
-        <img src="awakamogawa.png" width="500px" alt="安房鴨川駅駅名標">
-        <h1>安房鴨川（あわかもがわ）</h1>
-        <table border="1" align="center">
+        <table align="center" style="border-spacing: 0;">
             <tr>
-                <th style="width: 100px; text-align: left;">←<a href="../futomi/futomi.html">太海</a></th>
-                <th style="width: 100px;"><span style="color: #00b2e5;">■</span> 内房線</th>
-                <th style="width: 100px; text-align: right;"><a>安房天津</a>→</th>
+                <th colspan="5" class="station-name">
+                    <span class="station-name-jp">安房鴨川</span><br>
+                    <span class="station-name-kana">あわかもがわ</span>
+                </th>
+            </tr>
+            <tr>
+                <td rowspan="2" class="station-line-side"></td>
+                <td rowspan="2" class="station-line station-line-left">
+                    <a style="color: white;" href="../futomi/futomi.html"><b>太 海</b></a>
+                </td>
+                <td class="station-color" style="background-color: #00b2e5;"></td>
+                <td rowspan="2" class="station-line station-line-right">
+                    <a style="color: white;"><b>安房天津</b></a>
+                </td>
+                <td rowspan="2" class="station-line-side"></td>
+            </tr>
+            <tr>
+                <td class="station-color" style="background-color: #db4028;"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="station-name-en">
+                    <b>Awa-Kamogawa</b>
+                </td>
             </tr>
         </table>
         <br>
-        <br>
-        <h2><b>ATOS放送未採用</b></h2>
-        <p><b><a>外房線のページへ</a></b></p>
+        <table align="center" border="2"
+            style="border-collapse: collapse; border-color: black;">
+            <tr>
+                <td colspan="5"
+                    style="background-color: black; color: white; font-size: 18px;">
+                    <b>現在</b>
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2"
+                    style="background-color: #383838; color: white; width: 40px;">
+                    <span style="font-size: 20px;">1</span>
+                </th>
+                <td style="background-color: #db4028; width: 20px;"></td>
+                <td style="background-color: #383838; color: white; width: 240px; text-align: left;">
+                    外房線<br>
+                    <span style="font-size: small;">上総一ノ宮・千葉方面</span>
+                </td>
+                <td rowspan="2"
+                    style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
+                    <a>非公開</a>
+                </td>
+                <td rowspan="5"
+                    style="background-color: white; color: black; width: 240px; font-size: 15px; text-align: left;">
+                    外房PRC型放送です。<br>
+                    発車放送は巌根型放送を使用しています。
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #00b2e5; width: 20px;"></td>
+                <td style="background-color: #383838; color: white; width: 240px; text-align: left;">
+                    内房線<br>
+                    <span style="font-size: small;">君津・千葉方面</span>
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2" style="background-color: #383838; color: white; ">
+                    <span style="font-size: 20px;">2</span>
+                </th>
+                <td style="background-color: #db4028; width: 20px;"></td>
+                <td style="background-color: #383838; color: white; width: 240px; text-align: left;">
+                    外房線<br>
+                    <span style="font-size: small;">上総一ノ宮・千葉方面</span>
+                </td>
+                <td rowspan="2"
+                    style="background-color: white; color: black; font-size: 15px; text-align: left;">
+                    <a>非公開</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #00b2e5; width: 20px;"></td>
+                <td style="background-color: #383838; color: white; width: 240px; text-align: left;">
+                    内房線<br>
+                    <span style="font-size: small;">君津・千葉方面</span>
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color: #383838; color: white; ">
+                    <span style="font-size: 20px;">3</span>
+                </th>
+                <td style="background-color: #00b2e5; width: 20px;"></td>
+                <td style="background-color: #383838; color: white; width: 240px; text-align: left;">
+                    内房線<br>
+                    <span style="font-size: small;">君津・千葉方面</span>
+                </td>
+                </td>
+                <td 
+                    style="background-color: white; color: black; font-size: 15px; text-align: left;">
+                    <a>非公開</a>
+                </td>
+            </tr>
+        </table>
         <p><b><a href="../uchibo.html">内房線のページに戻る</a></b></p>
+        <p><b><a href="../../sotobo/sotobo.html">外房線のページに戻る</a></b></p>
     </body>
 </html>
