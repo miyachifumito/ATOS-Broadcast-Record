@@ -4,18 +4,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>東北本線-大河原</title>
+        <style>
+            .station-sign {
+    margin: auto;
+    border-spacing: 0;
+}
+
+.station-name {
+    width: 700px;
+    height: 35px;
+    background-color: white;
+}
+
+.station-name-jp {
+    font-size: 35px;
+}
+
+.station-name-kana {
+    font-size: 15px;
+}
+
+.station-line {
+    height: 20px;
+    background-color: green;
+}
+
+.station-line-left {
+    width: 247.5px;
+    text-align: left;
+}
+
+.station-line-right {
+    width: 247.5px;
+    text-align: right;
+}
+
+.station-line-side {
+    width: 30px;
+    background-color: green;
+}
+
+.station-color {
+    width: 25px;
+}
+
+.station-name-enl {
+    height: 15px;
+    background-color: white;
+    font-size: 15px;
+    text-align: left;
+}
+.station-name-enr {
+    height: 15px;
+    background-color: white;
+    font-size: 15px;
+    text-align: right;
+}
+        </style>
     </head>
-    <body style="text-align: center; background-color: rgb(132, 224, 174);">
-        <img src="ogawara.png" width="500px" alt="大河原駅駅名標">
-        <h1>大河原（おおがわら）</h1>
-        <table border="1" align="center">
+    <body style="text-align: center; background-color: #84e0ae; font-family: 'sans-serif', 'Noto Sans';">
+        <table align="center" style="border-spacing: 0;">
             <tr>
-                <th style="width: 100px; text-align: left;">←<a href="">北白川</a></th>
-                <th style="width: 100px;"><span style="color: #3cb371;">■</span> 東北本線</th>
-                <th style="width: 100px; text-align: right;"><a href="">船岡</a>→</th>
+                <th colspan="5" class="station-name">
+                    <span class="station-name-jp">おおがわら</span><br>
+                    <span class="station-name-kana">大 河 原</span>
+                </th>
+            </tr>
+            <tr>
+                <td class="station-line-side"></td>
+                <td class="station-line station-line-left">
+                    <a style="color: white;"><b>●</b></a>
+                </td>
+                <td class="station-line" style="color: white;">Ōgawara</td>
+                <td class="station-line station-line-right">
+                    <a style="color: white;"><b>●</b></a>
+                </td>
+                <td class="station-line-side"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="station-name-enl">
+                    <b>きたしらかわ</b>
+                </td>
+                <td colspan="2" class="station-name-enr">
+                    <b>ふなおか</b>
+                </td>
             </tr>
         </table>
-        <br>
         <p><b>
             2007年5月に常磐改良型ATOS放送を導入、しかし2日でユニペックス型放送に戻る。
         </b></p>
